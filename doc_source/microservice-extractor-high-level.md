@@ -1,9 +1,0 @@
-# Overview<a name="microservice-extractor-high-level"></a>
-
-The following are the high\-level steps for using AWS Microservice Extractor for \.NET to modernize your monolithic application by extracting it into smaller services\.
-
-1. **Onboard and analyze the application** — Onboard the application to Microservice Extractor by providing access to the application source code and binaries\. The backend service logic of the application is analyzed by Microservice Extractor to understand the application and node structure, and the dependencies between nodes\. The results of this analysis can help you to understand how to better group functionalities into separate services\. If you have runtime profiling data that represents production data, you can optionally use it with the analysis to collect actionable runtime metrics\. If Porting Assistant for \.NET is installed on your machine, you can optionally include \.NET Core compatibility data in the visualization side panel\. 
-
-1. **Assist with identifying grouped classes to extract as independent services** — Microservice Extractor creates a graphical representation of the application that shows the nodes, dependencies, and groupings based on dependency coupling\. If you have uploaded runtime profiling data during application onboarding, for example, transactional call volume, then it will be displayed\. This graphical representation assists you with extracting groupings of nodes as isolated services\.
-
-1. **Refactor source code and extract grouped nodes** — After the parts of the application that you want to extract are grouped and selected, refactor source code by isolating business domains and removing dependencies between them\. Then, extract the groups as separate code solutions\. After extracting the groups as separate solutions, you can manually edit and build the code solutions, and deploy them as independent services in containers\. 
